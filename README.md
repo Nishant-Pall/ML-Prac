@@ -28,3 +28,11 @@ for epoch in range(1000):
 ```
 Note that with warm_start=True, when the fit() method is called it continues training
 where it left off, instead of restarting from scratch.
+
+
+### Significance of C hyperparameter in SVMs
+
+We have two conflicting objectives: make the slack variables as small as possible to
+reduce the margin violations, and make ½ w⊺ w as small as possible to increase the
+margin. This is where the C hyperparameter comes in: it allows us to define the tradeoff
+between these two objectives.
